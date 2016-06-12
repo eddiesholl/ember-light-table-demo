@@ -1,3 +1,30 @@
 <h2 id="title">Welcome to Ember</h2>
 
 {{outlet}}
+
+
+{{#light-table table as |t|}}
+  {{t.head}}
+
+  {{#t.body as |body|}}
+    {{#body.expanded-row as |row|}}
+      Hello <b>{{row.firstName}}</b>
+    {{/body.expanded-row}}
+
+    {{#if isLoading}}
+      {{#body.loader}}
+        Loading...
+      {{/body.loader}}
+    {{/if}}
+
+    {{#if table.isEmpty}}
+      {{#body.no-data}}
+        No users found.
+      {{/body.no-data}}
+    {{/if}}
+  {{/t.body}}
+
+<!--  {{t.foot}} -->
+{{/light-table}}
+
+<button {{action "updateModel"}}>Update</button>
