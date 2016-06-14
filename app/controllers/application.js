@@ -14,6 +14,10 @@ export default Ember.Controller.extend({
 
       const people = store.peekAll('person');
       people.objectAt(0).set('state', new Date());
+    },
+
+    onColumnClick(column) {
+      console.log('onColumnClick')
     }
   },
 

@@ -4,7 +4,8 @@
 
 
 {{#light-table table as |t|}}
-  {{t.head}}
+  {{t.head
+     onColumnClick=(action 'onColumnClick')}}
 
   {{#t.body as |body|}}
     {{#body.expanded-row as |row|}}

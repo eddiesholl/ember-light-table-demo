@@ -1,0 +1,18 @@
+.ember-light-table, th, td
+{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+th
+{
+  border: 1px solid black;
+  padding: 10px;
+  background-color: darkcyan;
+  color: white;
+}
+td
+{
+  border: 1px solid black;
+  padding: 10px;
+}
